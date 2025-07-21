@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bigrace Business Solutions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #f8fafc;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        .navbar {
+            background: #22223b;
+        }
+        .navbar-brand, .nav-link, .navbar-nav .nav-link.active {
+            color: #fff !important;
+        }
+        .nav-link:hover {
+            color: #4ea8de !important;
+        }
+        .hero {
+            background: linear-gradient(120deg, #4ea8de 0%, #22223b 100%);
+            color: #fff;
+            padding: 60px 0 40px 0;
+            text-align: center;
+        }
+        .section {
+            padding: 40px 0;
+        }
+        .card {
+            border: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        }
+        .footer {
+            background: #24223b;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0 10px 0;
+            margin-top: 40px;
+            position:fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .active-link {
+            color: #4ea8de !important;
+            font-weight: bold;
+        }
+        @media (max-width: 767px) {
+            .hero { padding: 40px 0 20px 0; }
+            .section { padding: 20px 0; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#" onclick="showPage('home')">TechCentre</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active-link" href="#" onclick="showPage('home', this)">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('about', this)">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('services', this)">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('projects', this)">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('contact', this)">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Pages -->
+    <div id="home" class="page">
+        <div class="hero">
+            <h1>Welcome to Bigrace Business Solutions</h1>
+            <p class="lead">Innovative Technology. Reliable Solutions.</p>
+            <a href="#" class="btn btn-light btn-lg mt-3" onclick="showPage('services')">Our Services</a>
+        </div>
+        <div class="container section">
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="card p-4">
+                        <h4>Expert Team</h4>
+                        <p>Our technicals and designers are leaders in their fields, delivering top-notch solutions.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card p-4">
+                        <h4>Cutting-Edge Tech</h4>
+                        <p>We use the latest tools to build scalable, secure, and robust products.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card p-4">
+                        <h4>Client Focused</h4>
+                        <p>Your business goals drive our process. We partner with you for success.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="about" class="page" style="display:none;">
+        <div class="container section">
+            <h2 class="mb-4 text-center">About Bigrace Business Solutions</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" alt="Team" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6">
+                    <p>
+                        <strong>Bigrace Business Solutions</strong> is a leading technology company specializing in software development, graphics design, web publishing and IT consulting. 
+                        Founded in 2014, we have helped newbies, startups and enterprises transform their ideas into reality with innovative digital products.
+                    </p>
+                    <ul>
+                        <li>Over 1000+ successful projects delivered</li>
+                        <li>Over 10,000+ Student have been trained in tech aspect</li>
+                        <li>Clients in 10+ countries</li>
+                        <li>Agile and transparent process</li>
+                        <li>Continuous learning and improvement</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="services" class="page" style="display:none;">
+        <div class="container section">
+            <h2 class="mb-4 text-center">Our Services</h2>
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="card p-4 h-100">
+                        <h5>Custom Software Development</h5>
+                        <p>Web, mobile, and desktop applications tailored to your business needs.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card p-4 h-100">
+                        <h5>Cloud Solutions</h5>
+                        <p>Cloud migration, DevOps, and scalable infrastructure on AWS, Azure, and Google Cloud.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card p-4 h-100">
+                        <h5>Graphics Design</h5>
+                        <p>Logo making, letterhead production, flyer making, printing of document.</p>
+                    </div>
+                </div>
+                 <div class="col-md-4 mb-4">
+                    <div class="card p-4 h-100">
+                        <h5>Lawfirm Administration</h5>
+                        <p>Typing of document, Sending of Files, printing of document.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card p-4 h-100">
+                        <h5>IT Consulting</h5>
+                        <p>Strategy, architecture, and technology consulting to accelerate your digital transformation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="projects" class="page" style="display:none;">
+        <div class="container section">
+            <h2 class="mb-4 text-center">Our Projects</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card p-3">
+                        <h5>Safam Digital</h5>
+                        <p>Developed a secure online banking platform for a leading African bank, serving over 1 million users.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card p-3">
+                        <h5>E-commerce Marketplace</h5>
+                        <p>Built a scalable e-commerce platform and document with real-time analytics and seamless payment integration.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card p-3">
+                        <h5>Healthcare App</h5>
+                        <p>Created a telemedicine app connecting patients and doctors with secure video and chat.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card p-3">
+                        <h5>Law Firm</h5>
+                        <p>Created multiples of document and designs for the top lawyers in Nigeria</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card p-3">
+                        <h5>Oraganization; (School, Church, Mosque, Hospitals, Street Program)</h5>
+                        <p>Created multiples of document and designs for the top Oraganization in Nigeria</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card p-3">
+                        <h5>IoT Dashboard</h5>
+                        <p>Designed a real-time dashboard for smart devices, enabling remote monitoring and control.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="page" style="display:none;">
+        <div class="container section">
+            <h2 class="mb-4 text-center">Contact Us</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-7">
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" id="messageInput" rows="4" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                        <div id="contactMsg" class="mt-3"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        &copy; 2025 Bigrace Business Solutions. All rights reserved.
+    </div>
+
+    <script>
+        // Page navigation logic
+        function showPage(page, link = null) {
+            document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
+            document.getElementById(page).style.display = '';
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active-link'));
+            if (link) link.classList.add('active-link');
+            else {
+                // Set nav active if called from button
+                document.querySelectorAll('.nav-link').forEach(l => {
+                    if (l.textContent.trim().toLowerCase() === page) l.classList.add('active-link');
+                });
+            }
+            window.scrollTo(0, 0);
+        }
+
+        // Contact form logic
+        document.getElementById('contactForm').onsubmit = function(e) {
+            e.preventDefault();
+            document.getElementById('contactMsg').innerHTML = 
+                '<div class="alert alert-success">Thank you for contacting us! We will get back to you soon.</div>';
+            this.reset();
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container, .welcome-container {
+            background: #fff;
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            width: 350px;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 15px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        #message {
+            color: red;
+            margin-bottom: 10px;
+        }
+        .logout-btn {
+            background: #dc3545;
+            margin-top: 20px;
+        }
+        .logout-btn:hover {
+            background: #a71d2a;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container" id="login-container">
+        <h2>Login</h2>
+        <div id="message"></div>
+        <input type="text" id="username" placeholder="Username" required><br>
+        <input type="password" id="password" placeholder="Password" required><br>
+        <button id="login-btn">Login</button>
+    </div>
+    <div class="welcome-container" id="welcome-container" style="display:none;">
+        <h2>Welcome!</h2>
+        <p>You are now logged in.</p>
+        <button class="logout-btn" id="logout-btn">Logout</button>
+    </div>
+    <script>
+        const loginBtn = document.getElementById('login-btn');
+        const logoutBtn = document.getElementById('logout-btn');
+        const loginContainer = document.getElementById('login-container');
+        const welcomeContainer = document.getElementById('welcome-container');
+        const message = document.getElementById('message');
+
+        // Dummy credentials
+        const USERNAME = "admin";
+        const PASSWORD = "password123";
+
+        loginBtn.onclick = function() {
+            const user = document.getElementById('username').value.trim();
+            const pass = document.getElementById('password').value.trim();
+            if (user === USERNAME && pass === PASSWORD) {
+                loginContainer.style.display = "none";
+                welcomeContainer.style.display = "block";
+                message.textContent = "";
+            } else {
+                message.textContent = "Invalid username or password!";
+            }
+        };
+
+        logoutBtn.onclick = function() {
+            loginContainer.style.display = "block";
+            welcomeContainer.style.display = "none";
+            document.getElementById('username').value = "";
+            document.getElementById('password').value = "";
+        };
+    </script>
+</body>
+</html>
